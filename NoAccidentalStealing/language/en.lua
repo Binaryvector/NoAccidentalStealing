@@ -24,8 +24,8 @@ L.NAS_CONFIRM_SETTING_TEXT			= [[Stealing becomes possible, if one of the follow
  - you are double tapping the interaction key (touble tap timeframe can be set below)]]
 L.NAS_DOUBLE_TAP_HEAD				= "Double Tap Settings"
 L.NAS_DOUBLE_TAP_TITLE				= "Double Tap speed"
-L.NAS_DOUBLE_TAP_TEXT				= [[Double tapping the interaction key will confirm stealing an item, even if you aren't stealthed.
-To configure the double tap time frame, click the "Configure" button and double tap the interaction key (E by default).]]
+L.NAS_DOUBLE_TAP_TEXT				= [[Double tapping the interaction key will confirm stealing an item, even if you aren't stealthed.]]
+--To configure the double tap time frame, click the "Configure" button and double tap the interaction key (E by default).]]
 L.NAS_DOUBLE_TAP_BUTTON				= "Configure"
 L.NAS_DOUBLE_TAP_SLIDER				= "Double Tap intervall (in ms)"
 L.NAS_DOUBLE_TAP_SLIDER_TOOLTIP		= "You can set the double tap intervall directly, instead of using the configure button."

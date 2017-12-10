@@ -19,8 +19,8 @@ L.NAS_CONFIRM_SETTING_TEXT			= [[Le vol est possible si une de ces conditions so
  - le bouton d'interaction est appuyé deux fois (la plage de temps du double appui est réglable ci-dessous).]]
 L.NAS_DOUBLE_TAP_HEAD				= "Réglage du double appui"
 L.NAS_DOUBLE_TAP_TITLE				= "Vitesse du double appui"
-L.NAS_DOUBLE_TAP_TEXT				= [[Apuyer deux fois sur le bouton d'interaction confirmera le vol de l'objet, même si vous n'êtes pas en mode furtif.
-Pour configurer la plage de temps du double appui, cliquer sur le bouton "Configurer" et faire un double appui sur le bouton d'interaction.]]
+L.NAS_DOUBLE_TAP_TEXT				= [[Apuyer deux fois sur le bouton d'interaction confirmera le vol de l'objet, même si vous n'êtes pas en mode furtif.]]
+--Pour configurer la plage de temps du double appui, cliquer sur le bouton "Configurer" et faire un double appui sur le bouton d'interaction.]]
 L.NAS_DOUBLE_TAP_BUTTON				= "Configurer"
 L.NAS_DOUBLE_TAP_SLIDER				= "Intervalle du double appui (en ms)"
 L.NAS_DOUBLE_TAP_SLIDER_TOOLTIP		= "Il est possible de régler l'intervalle de temps du double appui directement plutôt que d'utiliser le bouton de configuration."

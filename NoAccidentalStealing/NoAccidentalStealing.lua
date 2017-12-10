@@ -115,7 +115,7 @@ local function OnAddonLoaded( _, addon )
 	if addon ~= "NoAccidentalStealing" then
 		return
 	end
-	settings = ZO_SavedVars:New("NAS_SavedVariables", 1, "settings", {delay = 0})
+	settings = ZO_SavedVars:New("NAS_SavedVariables", 1, "settings", {delay = 250})
 	--SLASH_COMMANDS["/stealtimeframe"] = SetTimeframe
 	
 	local L = NAS.localization
@@ -155,12 +155,12 @@ local function OnAddonLoaded( _, addon )
 		width = "half"
 	})
 	
-	optionsTable:insert({
-		type = "button",
-		name = L.NAS_DOUBLE_TAP_BUTTON,
-		func = function() start = -1 end,
-		width = "half",
-	})
+	--optionsTable:insert({
+	--	type = "button",
+	--	name = L.NAS_DOUBLE_TAP_BUTTON,
+	--	func = function() start = -1 end,
+	--	width = "half",
+	--})
 	
 	optionsTable:insert({
 		type = "slider",

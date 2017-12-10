@@ -19,8 +19,8 @@ L.NAS_CONFIRM_SETTING_TEXT			= [[Diebstahl wird möglich, wenn eine der folgende
  - du tippst die Interaktionstaste doppelt (Zeitspanne unten einzustellen)]]
 L.NAS_DOUBLE_TAP_HEAD				= "Doppel-Tipp Einstellungen"
 L.NAS_DOUBLE_TAP_TITLE				= "Doppel-Tipp Geschwindigkeit"
-L.NAS_DOUBLE_TAP_TEXT				= [[Die Interaktionstaste doppelt tippen erlaubt den Diebstahl auch, wenn du nicht in Deckung bist.
-Um die Zeitspanne zwischen zwei Tastenanschlägen einzustellen, klicke "Konfigurieren" und tippe zweimal die Interaktionstaste (Standard ist E).]]
+L.NAS_DOUBLE_TAP_TEXT				= [[Die Interaktionstaste doppelt tippen erlaubt den Diebstahl auch, wenn du nicht in Deckung bist.]]
+--Um die Zeitspanne zwischen zwei Tastenanschlägen einzustellen, klicke "Konfigurieren" und tippe zweimal die Interaktionstaste (Standard ist E).]]
 L.NAS_DOUBLE_TAP_BUTTON				= "Konfigurieren"
 L.NAS_DOUBLE_TAP_SLIDER				= "Doppel-Tipp Intervall (in ms)"
 L.NAS_DOUBLE_TAP_SLIDER_TOOLTIP		= "Du kannst das Doppel-Tipp Intervall auch direkt einstellen, anstatt den Konfigurieren Button anzuklicken."
