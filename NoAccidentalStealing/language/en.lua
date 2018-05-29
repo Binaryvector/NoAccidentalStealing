@@ -12,7 +12,7 @@ L.NAS_STEAL_INFO					= "StealInfo"
 -- addon description
 L.NAS_ADDON_NAME					= "NoAccidentalStealing"
 L.NAS_ADDON_AUTHOR					= "Shinni"
-L.NAS_ADDON_VERSION					= "1.5.13"
+L.NAS_ADDON_VERSION					= "1.5.15"
 
 -- option strings
 L.NAS_STEALTH_ALLOW 				= "stealth to allow stealing"

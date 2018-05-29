@@ -1,9 +1,9 @@
 ## Title: NoAccidentalStealing
 ## Author: Shinni
-## Version 1.5.14
+## Version 1.5.15
 ## OptionalDependsOn: LibAddonMenu-2.0
 ## SavedVariables: NAS_SavedVariables
-## APIVersion: 100022 100021
+## APIVersion: 100023
 
 libs\LibStub\LibStub.lua
 libs\LibAddonMenu-2.0\LibAddonMenu-2.0.lua
