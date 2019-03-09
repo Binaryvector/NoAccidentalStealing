@@ -123,8 +123,8 @@ local function OnAddonLoaded( _, addon )
 		type = "panel",
 		name = L.NAS_ADDON_NAME,
 		displayName = ZO_HIGHLIGHT_TEXT:Colorize(L.NAS_ADDON_NAME),
-		author = L.NAS_ADDON_AUTHOR,
-		version = L.NAS_ADDON_VERSION,
+		author = "Shinni",
+		version = "1.7",
 		registerForRefresh = true,
 		registerForDefaults = true,
 	}
