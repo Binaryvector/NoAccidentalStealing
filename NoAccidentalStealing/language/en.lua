@@ -7,7 +7,8 @@ local L = {}
 L.NAS_CONFIRM_STEAL 				= "Confirm Stealing"
 
 -- steal info
-L.NAS_STEAL_INFO					= "StealInfo"
+L.NAS_SHOW_INFO_CHECKBOX			= "Show status information"
+L.NAS_SHOW_INFO_CHECKBOX_TOOLTIP	= "When enabled, the addon will display instructions (e.g. keybind) on how to enable stealing."
 
 -- addon description
 L.NAS_ADDON_NAME					= "NoAccidentalStealing"

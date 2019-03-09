@@ -106,7 +106,7 @@ end
 -- hook the reticle update function, to update the additional control we added
 local updateInteractText = RETICLE.UpdateInteractText
 RETICLE.UpdateInteractText = function(self, ...)
-	stealInfoControl:SetHidden(IsInteractionAllowed())
+	stealInfoControl:SetHidden(IsInteractionAllowed() or settings.hideInfo)
 	SetInfoText()
 	return updateInteractText(self, ...)
 end
@@ -141,6 +141,15 @@ local function OnAddonLoaded( _, addon )
 		title = "",
 		text = L.NAS_CONFIRM_SETTING_TEXT,
 		width = "full"
+	})
+	
+	optionsTable:insert({
+		type = "checkbox",
+		name = L.NAS_SHOW_INFO_CHECKBOX,
+		tooltip = L.NAS_SHOW_INFO_CHECKBOX_TOOLTIP,
+		getFunc = function() return not (settings.hideInfo == true) end, -- initially nil, but i want boolean as return type
+		setFunc =  function(value) settings.hideInfo = not value end,
+		default = true,
 	})
 	
 	optionsTable:insert({
