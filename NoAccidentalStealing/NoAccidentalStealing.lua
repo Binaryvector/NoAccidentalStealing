@@ -124,7 +124,7 @@ local function OnAddonLoaded( _, addon )
 		name = L.NAS_ADDON_NAME,
 		displayName = ZO_HIGHLIGHT_TEXT:Colorize(L.NAS_ADDON_NAME),
 		author = "Shinni",
-		version = "1.7",
+		version = "1.8",
 		registerForRefresh = true,
 		registerForDefaults = true,
 	}
