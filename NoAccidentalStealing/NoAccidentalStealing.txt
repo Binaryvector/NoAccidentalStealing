@@ -1,7 +1,7 @@
 ## Title: NoAccidentalStealing
 ## Author: Shinni
-## Version 1.9
-## AddOnVersion: 109
+## Version 1.12
+## AddOnVersion: 112
 ## DependsOn: LibAddonMenu-2.0
 ## SavedVariables: NAS_SavedVariables
 ## APIVersion: 100031
