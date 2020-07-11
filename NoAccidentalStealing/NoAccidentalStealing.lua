@@ -1,4 +1,4 @@
-local LAM = LibStub("LibAddonMenu-2.0") -- addon menu
+
 local panel -- panel of the addon menu
 _G["NAS"] = _G["NAS"] or {}
 local NAS = _G["NAS"]
@@ -118,13 +118,25 @@ local function OnAddonLoaded( _, addon )
 	settings = ZO_SavedVars:New("NAS_SavedVariables", 1, "settings", {delay = 250})
 	--SLASH_COMMANDS["/stealtimeframe"] = SetTimeframe
 	
+	local AddOnManager = GetAddOnManager()
+	local displayVersion = ""
+	for addonIndex = 1, AddOnManager:GetNumAddOns() do
+		local name = AddOnManager:GetAddOnInfo(addonIndex)
+		if name == "NoAccidentalStealing" then
+			local versionInt = AddOnManager:GetAddOnVersion(addonIndex)
+			local rev = versionInt % 100
+			local version = zo_floor(versionInt / 100) % 100
+			displayVersion = string.format("%d.%d", version, rev)
+		end
+	end
+	
 	local L = NAS.localization
 	local panelData = {
 		type = "panel",
 		name = L.NAS_ADDON_NAME,
 		displayName = ZO_HIGHLIGHT_TEXT:Colorize(L.NAS_ADDON_NAME),
 		author = "Shinni",
-		version = "1.8",
+		version = displayVersion,
 		registerForRefresh = true,
 		registerForDefaults = true,
 	}
@@ -197,8 +209,8 @@ local function OnAddonLoaded( _, addon )
 		default = false,
 	})
 	
-	panel = LAM:RegisterAddonPanel("NoAccidentalStealingControl", panelData)
-	LAM:RegisterOptionControls("NoAccidentalStealingControl", optionsTable)
+	panel = LibAddonMenu2:RegisterAddonPanel("NoAccidentalStealingControl", panelData)
+	LibAddonMenu2:RegisterOptionControls("NoAccidentalStealingControl", optionsTable)
 end
 
 EVENT_MANAGER:RegisterForEvent("NoAccidentalStealing", EVENT_ADD_ON_LOADED , OnAddonLoaded)
