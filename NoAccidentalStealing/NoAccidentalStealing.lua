@@ -115,10 +115,12 @@ local function OnAddonLoaded( _, addon )
 	if addon ~= "NoAccidentalStealing" then
 		return
 	end
-	settings = ZO_SavedVars:New("NAS_SavedVariables", 1, "settings", {delay = 250})
+	settings = ZO_SavedVars:New("NAS_SavedVariables", 1, "settings", {delay = 250, criminalPressDuration = 750})
+	NAS.settings = settings
+	
+	NAS.InitializeAbility()
 	--SLASH_COMMANDS["/stealtimeframe"] = SetTimeframe
 	
-	local AddOnManager = GetAddOnManager()
 	local displayVersion = ""
 	for addonIndex = 1, AddOnManager:GetNumAddOns() do
 		local name = AddOnManager:GetAddOnInfo(addonIndex)
@@ -186,7 +188,7 @@ local function OnAddonLoaded( _, addon )
 	optionsTable:insert({
 		type = "slider",
 		name = L.NAS_DOUBLE_TAP_SLIDER,
-		tooltip = L.NAS_DOUBLE_TAP_SLIDER_TOOLTIP,
+		--tooltip = L.NAS_DOUBLE_TAP_SLIDER_TOOLTIP,
 		min = 0,
 		max = 1000,
 		getFunc = function() return settings.delay end,
@@ -207,6 +209,31 @@ local function OnAddonLoaded( _, addon )
 		getFunc = function() return (settings.allowContainers == true) end, -- initially nil, but i want false as return type
 		setFunc =  function(value) settings.allowContainers = value end,
 		default = false,
+	})
+	
+	optionsTable:insert({
+		type = "header",
+		name = L.NAS_ABILITY_HEAD,
+	})
+	
+	optionsTable:insert({
+		type = "description",
+		--title = L.NAS_DOUBLE_TAP_TITLE,
+		text = L.NAS_ABILITY_TEXT,
+		disabled = IsInGamepadPreferredMode,
+		width = "half"
+	})
+	
+	optionsTable:insert({
+		type = "slider",
+		name = L.NAS_ABILITY_SLIDER,
+		disabled = IsInGamepadPreferredMode,
+		--tooltip = L.NAS_ABILITY_SLIDER_TOOLTIP,
+		getFunc = function() return settings.criminalPressDuration end, -- initially nil, but i want false as return type
+		setFunc =  function(value) settings.criminalPressDuration = value end,
+		default = 750,
+		min = 0,
+		max = 1500,
 	})
 	
 	panel = LibAddonMenu2:RegisterAddonPanel("NoAccidentalStealingControl", panelData)
